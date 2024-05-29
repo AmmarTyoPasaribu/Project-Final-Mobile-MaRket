@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:gravity="center"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="40dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_black"
+        android:text="Create an " />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/poppins_black"
+        android:text="account" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edit_text_username"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/bglogin"
+        android:textColorHint="#635753"
+        android:drawableLeft="@drawable/baseline_person_24"
+        android:drawablePadding="8dp"
+        android:padding="8dp"
+        android:textColor="#000000"
+        android:hint="Username"
+        />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edit_text_password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColorHint="#635753"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/bglogin"
+        android:drawableLeft="@drawable/lock"
+        android:drawablePadding="8dp"
+        android:textColor="#000000"
+        android:padding="8dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        />
+
+    <Button
+        android:id="@+id/button_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#F83758"
+        android:textColor="#ffffff"
+
+        android:fontFamily="sans-serif-black"
+        android:layout_marginBottom="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textColor="#000000"
+            android:text="I Already Have An Account"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/kelogin"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:textColor="#F83758"
+            android:text="Login"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</LinearLayout>
