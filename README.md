@@ -2,9 +2,6 @@
 
 Aplikasi ini menggunakan API dari website https://dummyjson.com/products , yang berisikan produk produk yang dijual di aplikasi MaRket
 
-Aplikas ini memiliki halamam login dan register, yang berisikan username dan password dan menggunakan sharepreference sebagai penyimpanan data login nya 
-kkk
-
 
 Dokumentasi Aplikasi
 Deskripsi Aplikasi
