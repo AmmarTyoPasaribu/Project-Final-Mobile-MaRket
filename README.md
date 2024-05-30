@@ -1,4 +1,4 @@
-# MaRket , Aplikasi Mobile dengan tema E_Commerce.
+## MaRket , Aplikasi Mobile E_Commerce.
 
 Aplikasi ini menggunakan API dari website https://dummyjson.com/products , yang berisikan produk produk yang dijual di aplikasi MaRket
 
