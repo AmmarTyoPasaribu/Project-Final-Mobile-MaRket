@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.tefinal.Product;
+import com.example.tefinal.models.Product;
 import com.example.tefinal.R;
 import com.example.tefinal.adapter.PaymentAdapter;
 import com.google.gson.Gson;

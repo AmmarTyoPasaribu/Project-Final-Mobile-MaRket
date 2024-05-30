@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
-import com.example.tefinal.Product;
+import com.example.tefinal.models.Product;
 import com.example.tefinal.R;
 
 import java.util.ArrayList;

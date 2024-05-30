@@ -1,8 +1,11 @@
 package com.example.tefinal.activity;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.HandlerThread;
+import android.os.Looper;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -19,9 +22,9 @@ public class LoginActivity extends AppCompatActivity {
     private EditText editTextUsername, editTextPassword;
     private ProgressBar progressBar;
     private Button buttonLogin;
-//    private Button buttonRegister;
     private TextView keregis, judul1, judul2, judul3;
     private SharedPreferences sharedPreferences;
+    private Handler backgroundHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,19 +34,20 @@ public class LoginActivity extends AppCompatActivity {
         editTextUsername = findViewById(R.id.edit_text_username);
         editTextPassword = findViewById(R.id.edit_text_password);
         buttonLogin = findViewById(R.id.button_login);
-//        buttonRegister = findViewById(R.id.button_register);
         keregis = findViewById(R.id.keregis);
         judul1 = findViewById(R.id.judul1);
         judul2 = findViewById(R.id.judul2);
         judul3 = findViewById(R.id.judul3);
         progressBar = findViewById(R.id.progress_bar);
 
-
-
-
         sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
 
         checkLoginStatus();
+
+        // Membuat dan memulai HandlerThread
+        HandlerThread handlerThread = new HandlerThread("BackgroundThread");
+        handlerThread.start();
+        backgroundHandler = new Handler(handlerThread.getLooper());
 
         keregis.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,14 +63,6 @@ public class LoginActivity extends AppCompatActivity {
                 loginUser();
             }
         });
-//
-//        buttonRegister.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-//                startActivity(intent);
-//            }
-//        });
     }
 
     private void loginUser() {
@@ -84,10 +80,8 @@ public class LoginActivity extends AppCompatActivity {
         if (username.equals(savedUsername) && password.equals(savedPassword)) {
             progressBar.setVisibility(View.VISIBLE);
 
-
             editTextUsername.setVisibility(View.GONE);
             buttonLogin.setVisibility(View.GONE);
-//            buttonRegister.setVisibility(View.GONE);
             judul1.setVisibility(View.GONE);
             judul2.setVisibility(View.GONE);
             judul3.setVisibility(View.GONE);
@@ -96,13 +90,20 @@ public class LoginActivity extends AppCompatActivity {
 
             klosudahloginakanlngsunghome(true);
 
-            new Handler().postDelayed(new Runnable() {
+            // Menjalankan kode di background thread dengan delay
+            backgroundHandler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    progressBar.setVisibility(View.GONE);
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                    startActivity(intent);
-                    finish();
+                    // Kembali ke UI thread untuk memperbarui UI
+                    new Handler(Looper.getMainLooper()).post(new Runnable() {
+                        @Override
+                        public void run() {
+                            progressBar.setVisibility(View.GONE);
+                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                            startActivity(intent);
+                            finish();
+                        }
+                    });
                 }
             }, 3000); // 3 seconds delay
         } else {
@@ -126,5 +127,4 @@ public class LoginActivity extends AppCompatActivity {
         editor.putBoolean("isLoggedIn", isLoggedIn);
         editor.apply();
     }
-
 }

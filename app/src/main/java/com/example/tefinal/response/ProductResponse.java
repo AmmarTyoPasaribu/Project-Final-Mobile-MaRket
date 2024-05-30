@@ -1,6 +1,8 @@
-package com.example.tefinal;
+package com.example.tefinal.response;
 
 // ProductResponse.java
+import com.example.tefinal.models.Product;
+
 import java.util.List;
 
 public class ProductResponse {

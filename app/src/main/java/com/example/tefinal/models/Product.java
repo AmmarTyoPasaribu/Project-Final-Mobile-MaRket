@@ -1,4 +1,4 @@
-package com.example.tefinal;
+package com.example.tefinal.models;
 import android.os.Parcel;
 import android.os.Parcelable;
 

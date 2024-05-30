@@ -12,7 +12,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
-import com.example.tefinal.Product;
+import com.example.tefinal.models.Product;
 import com.example.tefinal.R;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

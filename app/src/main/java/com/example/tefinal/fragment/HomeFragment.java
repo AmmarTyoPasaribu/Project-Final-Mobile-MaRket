@@ -21,11 +21,11 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.tefinal.ApiService;
-import com.example.tefinal.Product;
+import com.example.tefinal.api.ApiService;
+import com.example.tefinal.models.Product;
 import com.example.tefinal.adapter.ProductAdapter;
 import com.example.tefinal.activity.ProductDetailActivity;
-import com.example.tefinal.ProductResponse;
+import com.example.tefinal.response.ProductResponse;
 import com.example.tefinal.R;
 
 import java.util.ArrayList;

@@ -18,7 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tefinal.adapter.ConfirmedProductAdapter;
 import com.example.tefinal.activity.LoginActivity;
-import com.example.tefinal.Product;
+import com.example.tefinal.models.Product;
 import com.example.tefinal.activity.ProfileActivity;
 import com.example.tefinal.R;
 import com.google.gson.Gson;

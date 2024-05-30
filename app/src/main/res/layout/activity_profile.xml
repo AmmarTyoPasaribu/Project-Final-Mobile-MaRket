@@ -2,10 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:layout_gravity="center"
     android:gravity="center_horizontal"
-    >
+    android:orientation="vertical">
 
     <RelativeLayout
         android:id="@+id/atas"
@@ -15,7 +14,6 @@
         android:paddingHorizontal="16dp"
         android:paddingTop="16dp"
         android:paddingBottom="10dp">
-
 
 
         <LinearLayout
@@ -43,47 +41,37 @@
         android:id="@+id/image_view_profile"
         android:layout_width="200dp"
         android:layout_height="200dp"
-
-
         android:src="@drawable/untukprofiltanpabg"
-
-
-         />
-
+        />
 
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/edit_text_username"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-
-        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="20dp"
         android:background="@drawable/bglogin"
         android:drawableLeft="@drawable/baseline_person_24"
         android:drawablePadding="8dp"
-        android:paddingVertical="8dp"
-        android:layout_marginHorizontal="20dp"
         android:paddingHorizontal="16dp"
-        android:textColor="#000000"
         android:hint="Username"
-        android:textColorHint="#635753"
-        />
+        android:textColor="#000000"
+        android:textColorHint="#635753" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/edit_text_password"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginVertical="10dp"
         android:layout_marginHorizontal="20dp"
+        android:paddingHorizontal="16dp"
+        android:layout_marginVertical="10dp"
         android:background="@drawable/bglogin"
         android:drawableLeft="@drawable/lock"
         android:drawablePadding="8dp"
-        android:padding="8dp"
         android:hint="Password"
-        android:textColorHint="#635753"
-        android:textColor="#000000"
         android:inputType="textPassword"
-        />
+        android:textColor="#000000"
+        android:textColorHint="#635753" />
 
     <Button
         android:id="@+id/button_done"
@@ -93,9 +81,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
         android:backgroundTint="#000000"
-        android:fontFamily="@font/andika"
-        android:textStyle="bold"
         android:drawableLeft="@drawable/editlagi"
-        android:text="Edit Profile" />
+        android:fontFamily="@font/andika"
+        android:text="Edit Profile"
+        android:textStyle="bold" />
 
 </LinearLayout>
